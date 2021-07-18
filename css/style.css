@@ -196,7 +196,7 @@ h1.sectionTitle:after{
     transition: 0.4s;
     height: 45vh;
 }
-#banner .imgContainer img:hover{
+#banner:hover img{
     opacity: 0.4;
 }
 #banner .content{
@@ -274,7 +274,7 @@ footer a:hover{
 footer nav, footer div{
     margin: 1rem 0;
 }
-footer div{
+footer div.copy{
     text-align: right;
 }
 footer li{
@@ -283,8 +283,11 @@ footer li{
 footer input{
     border: none;
     padding: 0.5rem;
-    width: 100%;
-    margin: 1rem 0;
+    width: 80%;
+    margin: 1rem;
+}
+footer .buttons{
+    margin: 0 1rem;
 }
 /*--------------------------FOOTER SECTION ENDS----------------------------------------*/
 
@@ -308,7 +311,7 @@ footer input{
 /*--------------------------GOUP SECTION ENDS----------------------------------------*/
 
 
-/*--------------------------OVERWRITES----------------------------------------*/
+/*--------------------------OVERWRITE STARTS----------------------------------------*/
 .scrolled{
     background-color: var(--themeRed);
     color: var(--white);
@@ -322,3 +325,148 @@ footer input{
 .show{
     display: block!important;
 }
+/*--------------------------OVERWRITE ENDS----------------------------------------*/
+
+
+/*--------------------------MEDIA QUERIES TABLET----------------------------------------*/
+@media screen and (min-width:720px) {
+    main{
+        width: 95%;
+        margin: auto;
+    }
+    section{
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    #headerNav{
+        height: 3.5rem;
+    }
+    #banner .imgContainer{
+        height: 55vh;
+    }
+    #banner .imgContainer img{
+        height: 55vh;
+    }
+    #banner .content{
+        padding: 1rem;
+    }
+    #banner .content p{
+        display: block;
+    }
+    .popular .cardsContainer{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1rem;
+    }
+    .popular .big{
+        grid-column: 1/3;
+        position: relative;
+    }
+    .popular .big .cardImg{
+        height: 82%
+    }
+    .big .content h5{
+        font-size:2.2rem;
+    }
+    .subCategory .cardsContainer{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .superCategory .cardsContainer{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .superCategory .whole{
+        grid-column: 1/3;
+    }
+    .whole a{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .whole .content{
+        margin: auto;
+    }
+    footer{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    footer div.copy{
+        text-align: left;
+        margin: 1rem;
+    }
+}
+/*--------------------------MEDIA QUERIES TABLET----------------------------------------*/
+
+
+/*--------------------------MEDIA QUERIES COMPUTER----------------------------------------*/
+@media screen and (min-width:1000px) {
+    section{
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+    #headerNav{
+        height: 3.7rem;
+        padding-left: 15%;
+    }
+    #banner .content{
+        text-align: center;
+        bottom: 40%;
+        left: 25%;
+        width: 50%;
+    }
+    #banner h2{
+        font-size: 3rem;
+    }
+    #banner p{
+        padding-top: 1rem;
+        font-size: 1.2rem
+    }
+    #banner .imgContainer{
+        height: 80vh;
+    }
+    #banner .imgContainer img{
+        height: 80vh;
+    }
+    #headerNav #logo{
+        padding-left: 2rem;
+    }
+    #socials ul{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    #socials{
+        top: 0.6rem;
+        width: 10rem;
+        right: 15%;
+    }
+    main{
+        width: 70%;
+    }
+    .popular .cardsContainer,
+    .superCategory .cardsContainer{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .popular .big{
+        grid-column: 1/3;
+        grid-row: 1/3;
+    }
+    .superCategory .whole{
+        grid-column: 1/4;
+    }
+    .whole{
+        height: 400px;
+    }
+    .whole .cardImg, .whole .content{
+        height: 100%;
+    }
+    .whole .content h5{
+        font-size: 2.2rem;
+    }
+    .whole .content{
+        padding: 8rem 0;
+    }
+    footer{
+        padding: 1rem 15%;
+    }
+}
+/*--------------------------MEDIA QUERIES COMPUTER----------------------------------------*/
+
