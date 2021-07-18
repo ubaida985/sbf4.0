@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto&family=Roboto+Slab&display=swap');
+
+/*--------------------------CSS PRESETS----------------------------------------*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --white: #fff;
+    --black: #000;
+    --light: #ebebeb;
+    --themeRed: #d2232e;
+    --themeGreen: rgb(0, 102, 0);
+    --dark: #444;
+    --darker: #222;
+}
+
+/*--------------------------GENERAL CSS----------------------------------------*/
+img{
+    width: 100%;
+}
+.imgContainer, .cardContainer{
+    overflow: hidden;
+}
+body{
+    background-color: var(--light);
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Roboto', sans-serif;
+}
+p{
+    font-family: 'Lato', sans-serif;
+}
+.flexColumn{
+    display: flex;
+    flex-direction: column;
+}
+.flexRow{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.fa-facebook,
+.fa-instagram,
+.fa-linkedin,
+.fa-twitter{
+    transition: color 0.3s;
+}
+.fa-facebook:hover{
+    color: #4267B2;
+}
+.fa-instagram:hover{
+    color: #fb3958;
+}
+.fa-linkedin:hover{
+    color: #0077B5;
+}
+.fa-twitter:hover{
+    color: #1DA1F2;
+}
+#header ul,
+#socials ul,
+#footer ul{
+    list-style-type: none;
+}
+#header a{
+    text-decoration: none;
+    color: var(--black);
+}
+section{
+    background-color: var(--white);
+    margin: 2rem 0;
+    padding: 1rem 0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+h1.sectionTitle{
+    font-size: 3rem;
+    padding-bottom: 1rem;
+}
+h1.sectionTitle:before{
+    content: '';
+    display: inline-block;
+    background-color: var(--themeRed);
+    width: 10px;
+    margin: 0 1rem;
+    height: 3rem;
+}
+h1.sectionTitle:after{
+    content: '';
+    display: inline-block;
+    background-color: var(--themeRed);
+    width: 10px;
+    height: 3rem;
+    margin: 0 1rem;
+}
+.card{
+    margin: 1rem 0;
+    padding: 0.5rem 0;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+.card a{
+    text-decoration: none;
+    color: var(--darker);
+}
+.card .content{
+    padding: 1rem 0.5rem;
+}
+.card .cardImg{
+    height: 200px;
+    overflow: hidden;
+}
+.cardImg img{
+    transform: scale(0.95);
+    transition: transform 0.4s;
+    height: 100%;
+}
+.card:hover img{
+    transform: scale(1);
+}
+.card .content h5{
+    font-size: 1.4rem;
+}
+.buttons{
+    padding: 0.5rem 1rem;
+    background-color: var(--themeRed);
+    color: var(--white);
+    border: 3px solid var(--white);
+    border-radius: 3rem;
+}
+/*--------------------------HEADER SECTION STARTS----------------------------------------*/
+#header{
+}
+#headerNav{
+    height: 3rem;
+    font-size: 1.4rem;
+    z-index: 99;
+    position: fixed;
+    width: 100%;
+    transition: background-color 0.3s, color 0.3s;
+}
+#headerNav div,nav{
+    margin: auto 0;
+    padding: 0 0.5rem;
+}
+#header #sideNav{
+    position: fixed;
+    z-index: 99;
+    top: 3rem;
+    width: 24rem;
+    min-height: 100%;
+    transition: background-color 0.3s, color 0.3s;
+    overflow-y: scroll;
+    bottom: 0;
+    padding-bottom: 4rem;
+    transform: translateX(-24rem);
+    transition: transform 0.3s;
+}
+#sideNav li{
+    padding: 0.3rem 0;
+}
+#sideNav li div{
+    display: inline-block;
+    width: 40%;
+}
+#sideNav .toggle{
+    text-align: right;
+}
+#sideNav input{
+    width: 100%;
+    padding: 0.4rem;
+    border: none;
+    outline-color: var(--themeRed);
+}
+#sideNav .subMenu{
+    display: none;
+}
+/*--------------------------HEADER SECTION ENDSS----------------------------------------*/
+
+
+/*--------------------------BANNER SECTION STARTS----------------------------------------*/
+#banner{
+    position: relative;
+}
+#banner a{
+    text-decoration: none;
+    color: var(--white);
+}
+#banner .imgContainer{
+    background-color: rgba(0, 0, 0, 0.8);
+    height: 45vh;
+}
+#banner .imgContainer img{
+    transition: 0.4s;
+    height: 45vh;
+}
+#banner .imgContainer img:hover{
+    opacity: 0.4;
+}
+#banner .content{
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+#banner:hover .content{
+    opacity: 1;
+}
+#banner p{
+    display: none;
+}
+/*--------------------------BANNER SECTION ENDS----------------------------------------*/
+
+
+/*--------------------------SOCIALS SECTION STARTS----------------------------------------*/
+#socials{
+    position: fixed;
+    padding: 0.1rem;
+    right: 0;
+    top: 35%;
+    border-radius: 1rem;
+    transition: background-color 0.3s;
+    z-index: 99;
+}
+#socials a{
+    color: var(--white);
+    font-size: 1.2rem;
+}
+#socials li{
+    padding: 0.5rem 0;
+}
+/*--------------------------SOCIALS SECTION ENDS----------------------------------------*/
+
+
+/*--------------------------SUBCATEGORY SECTION STARTS----------------------------------------*/
+.subCategory{
+    background-color: var(--light);
+}
+.subCategory .cardsContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0.5rem;
+}
+.subCategory .cardImg{
+    height: 100px;
+}
+.subCategory .card{
+    background-color: var(--white);
+}
+/*--------------------------SUBCATEGORY SECTION ENDS----------------------------------------*/
+
+
+/*--------------------------SUPERCATEGORY SECTION STARTS----------------------------------------*/
+
+/*--------------------------SUPERCATEGORY SECTION STARTS----------------------------------------*/
+
+
+/*--------------------------FOOTER SECTION ENDS----------------------------------------*/
+footer{
+    background-color: var(--themeRed);
+    color: var(--white);
+    padding: 1rem 0 0.2rem 0;
+}
+footer a{
+    color: var(--white);
+    text-decoration: none;
+}
+footer a:hover{
+    text-decoration: underline;
+}
+footer nav, footer div{
+    margin: 1rem 0;
+}
+footer div{
+    text-align: right;
+}
+footer li{
+    padding: 0.4rem 0;
+}
+footer input{
+    border: none;
+    padding: 0.5rem;
+    width: 100%;
+    margin: 1rem 0;
+}
+/*--------------------------FOOTER SECTION ENDS----------------------------------------*/
+
+
+/*--------------------------GOUP SECTION ENDS----------------------------------------*/
+#goUp{
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    background-color: var(--themeRed);
+    height: 3rem;
+    width: 3rem;
+    text-align: center;
+    padding-top: 0.9rem;
+    border-radius: 50%;
+}
+#goUp a{
+    color: var(--white);
+    font-size: 1.2rem;
+}
+/*--------------------------GOUP SECTION ENDS----------------------------------------*/
+
+
+/*--------------------------OVERWRITES----------------------------------------*/
+.scrolled{
+    background-color: var(--themeRed);
+    color: var(--white);
+}
+.scrolled a{
+    color: var(--white)!important;
+}
+.navToggler{
+    transform: translateX(0)!important;
+}
+.show{
+    display: block!important;
+}
