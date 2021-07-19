@@ -91,4 +91,5 @@
             element.className = classList;
         }
     }
+
 })();
