@@ -264,7 +264,7 @@ h1.sectionTitle:after{
 .subCategory .cardsContainer{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 0.5rem;
+    gap: 1rem;
 }
 .subCategory .card{
     background-color: var(--white);
@@ -416,6 +416,9 @@ article.blog h2{
 
 /*--------------------------MEDIA QUERIES TABLET----------------------------------------*/
 @media screen and (min-width:720px) {
+    .card{
+        margin: 0;
+    }
     main{
         width: 95%;
         margin: auto;
@@ -442,7 +445,7 @@ article.blog h2{
     .popular .cardsContainer{
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-gap: 1rem;
+        gap: 1rem;
     }
     .popular .big{
         grid-column: 1/3;
@@ -460,7 +463,7 @@ article.blog h2{
     .superCategory .cardsContainer{
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-gap: 1rem;
+        gap: 1rem;
     }
     .superCategory .whole{
         grid-column: 1/3;
@@ -567,7 +570,7 @@ article.blog h2{
     main.blogContainer{
         display: grid;
         grid-template-columns: 3fr 1fr;
-        grid-gap: 1rem;
+        gap: 1rem;
     }
     main.blogContainer aside{
         border-top: 8rem solid transparent;
