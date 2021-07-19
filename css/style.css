@@ -33,7 +33,7 @@ body{
 h1,h2,h3,h4,h5,h6{
     font-family: 'Roboto', sans-serif;
 }
-p{
+p, #logo a{
     font-family: 'Lato', sans-serif;
 }
 .flexColumn{
@@ -65,10 +65,12 @@ p{
 }
 #header ul,
 #socials ul,
-#footer ul{
+#footer ul, 
+.pagination ul{
     list-style-type: none;
 }
-#header a{
+#header a,
+.pagination a{
     text-decoration: none;
     color: var(--black);
 }
@@ -77,6 +79,12 @@ section{
     margin: 2rem 0;
     padding: 1rem 0;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+section.popular a,
+section.subCategory a,
+section.superCategory a{
+    text-decoration: none;
+    color: var(--darker);
 }
 h1.sectionTitle{
     font-size: 3rem;
@@ -128,6 +136,12 @@ h1.sectionTitle:after{
     border: 3px solid var(--white);
     border-radius: 3rem;
     cursor: pointer;
+}
+.borders{
+    background-color: var(--white);
+    border-top: 5rem solid var(--light);
+    border-bottom: 5rem solid var(--light);
+    padding: 2rem 0;
 }
 /*--------------------------HEADER SECTION STARTS----------------------------------------*/
 #headerNav{
@@ -308,22 +322,18 @@ footer .buttons{
     text-align: center;
     padding-top: 0.9rem;
     border-radius: 50%;
+    transition: background-color 0.4s;
+    box-shadow: 0 0 22px rgba(0, 0, 0, 0.3);
 }
 #goUp a{
     color: var(--white);
     font-size: 1.2rem;
+    transition: color 0.4s;
 }
 /*--------------------------GOUP SECTION ENDS----------------------------------------*/
 
 
 /*--------------------------ARTICLE SECTION STARTS----------------------------------------*/
-
-article.blog{
-    background-color: var(--white);
-    border-top: 5rem solid var(--light);
-    border-bottom: 5rem solid var(--light);
-    padding: 2rem 0;
-}
 article.blog h1{
     font-size: 2rem;
     padding: 0.5rem;
@@ -372,6 +382,36 @@ article.blog h2{
     background: var(--darker);
 }
 /*--------------------------SCROLLBAR SECTION STARTS----------------------------------------*/
+
+
+/*--------------------------PAGINATION SECTION STARTS----------------------------------------*/
+.pagination a{
+    color: var(--white);
+    transition: color 0.4s;
+}
+.pagination ul{
+    width: 15rem;
+    margin: 2rem auto;
+}
+.pagination li{
+    display: inline-block;
+    cursor: pointer;
+    background-color: var(--theme);
+    padding: 1rem;
+    margin: 0 0.2rem;
+    border-radius: 50%;
+    transition: background-color 0.4s;
+    box-shadow: 0 0 22px rgba(0, 0, 0, 0.3);
+}
+.pagination li:hover,
+#goUp:hover{
+    background-color: var(--light);
+}
+.pagination li:hover a,
+#goUp:hover a{
+    color: var(--theme);
+}
+/*--------------------------PAGINATION SECTION STARTS----------------------------------------*/
 
 
 /*--------------------------MEDIA QUERIES TABLET----------------------------------------*/
@@ -441,7 +481,7 @@ article.blog h2{
         margin: 1rem;
     }
 
-    article.blog{
+    .borders{
         border-top: 10rem solid var(--light);
         border-bottom: 5rem solid var(--light);
         padding: 4rem;
