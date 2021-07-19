@@ -45,6 +45,9 @@ p, #logo a{
     flex-direction: row;
     flex-wrap: wrap;
 }
+.center{
+    text-align: center; 
+}
 .fa-facebook,
 .fa-instagram,
 .fa-linkedin,
@@ -175,6 +178,10 @@ h1.sectionTitle:after{
 #sideNav li{
     padding: 0.6rem;
     font-family: 'Lato', sans-serif;
+    transition: background-color 0.3s;
+}
+#sideNav li:hover{ 
+    background-color: rgba(0, 0, 0, 0.3);
 }
 #sideNav li div{
     display: inline-block;
@@ -191,6 +198,7 @@ h1.sectionTitle:after{
     width: 100%;
     padding: 0.4rem;
     border: none;
+    margin-top: 2rem;
     outline-color: var(--theme);
 }
 #sideNav .subMenu{
